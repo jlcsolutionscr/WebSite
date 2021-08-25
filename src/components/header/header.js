@@ -16,9 +16,7 @@ function Header() {
         <Button disabled={!!useRouteMatch('/mobile')} className={classes.menuButton} color='inherit' onClick={() => history.push('/mobile')}>Android App</Button>
         <Button disabled={!!useRouteMatch('/windows')} className={classes.menuButton} color='inherit' onClick={() => history.push('/windows')}>Windows App</Button>
         <Button disabled={!!useRouteMatch('/platform')} className={classes.menuButton} color='inherit' onClick={() => history.push('/platform')}>Plataforma</Button>
-        <div className={classes.hideButton}>
-          <Button disabled={!!useRouteMatch('/downloads')} className={classes.menuButton} color='inherit' onClick={() => history.push('/downloads')}>Descargas</Button>
-        </div>
+        <Button disabled={!!useRouteMatch('/apps')} className={classes.menuButton} color='inherit' onClick={() => history.push('/apps')}>Apps</Button>
       </div>
       <Typography classes={{h2: classes.h2}} variant='h2' align='center' component='h2'>
         JLC Solutions

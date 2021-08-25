@@ -52,6 +52,10 @@ export const createStyle = makeStyles(theme => createStyles({
     fontSize: theme.typography.pxToRem(16),
     color: 'inherit'
   },
+  appsLink: {
+    marginTop: theme.spacing(2),
+    fontSize: theme.typography.pxToRem(18)
+  },
   paragraphError: {
     marginTop: theme.spacing(2),
     fontSize: theme.typography.pxToRem(16),
