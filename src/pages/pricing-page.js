@@ -54,13 +54,13 @@ const tiers = [
   {
     title: '50 documentos',
     price: '12,500.00',
-    description: ['1 usuario', '50 documentos electrónicos', '1 terminal (Android o Windows)', 'Soporte técnico', 'Recepción de gastos límitados'],
+    description: ['1 usuario', '50 documentos electrónicos', '1 terminal (Android o Windows)', 'Soporte técnico', 'Vigencia de un año calendario'],
     monthlyPayment: false
   },
   {
     title: '100 documentos',
     price: '20,000.00',
-    description: ['1 usuario', '100 documentos electrónicos', '1 terminal (Android o Windows)', 'Soporte técnico', 'Recepción de gastos límitados'],
+    description: ['1 usuario', '100 documentos electrónicos', '1 terminal (Android o Windows)', 'Soporte técnico', 'Vigencia de un año calendario'],
     monthlyPayment: false
   },
   {
