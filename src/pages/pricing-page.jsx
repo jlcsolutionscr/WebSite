@@ -52,33 +52,33 @@ const useStyles = makeStyles((theme) => ({
 
 const tiers = [
   {
-    title: "24 documentos (1 solo pago anual)",
+    title: "24 documentos * (Pago único ANUAL)",
     price: "14,500.00",
     description: [
       "1 usuario",
-      "50 documentos electrónicos",
+      "24 documentos electrónicos",
       "1 terminal (Android o Windows)",
       "Soporte técnico",
       "Recepción de gastos límitados",
     ],
   },
   {
-    title: "60 documentos (1 solo pago anual)",
+    title: "60 documentos * (Pago único ANUAL)",
     price: "21,500.00",
     description: [
       "1 usuario",
-      "100 documentos electrónicos",
+      "60 documentos electrónicos",
       "1 terminal (Android o Windows)",
       "Soporte técnico",
       "Recepción de gastos límitados",
     ],
   },
   {
-    title: "150 documentos (1 solo pago anual)",
+    title: "150 documentos * (Pago único ANUAL)",
     price: "30,000.00",
     description: [
       "1 usuario",
-      "100 documentos electrónicos",
+      "150 documentos electrónicos",
       "Windows, MAC, Android o IPhone",
       "Sitio web de facturación",
       "Soporte técnico",
@@ -86,7 +86,7 @@ const tiers = [
     ],
   },
   {
-    title: "PYMES 1 *",
+    title: "PYMES 1 ** (Pago MENSUAL)",
     subheader: "Most popular",
     price: "8,500.00",
     description: [
@@ -99,19 +99,19 @@ const tiers = [
     ],
   },
   {
-    title: "EMPRESARIAL 1 *",
+    title: "EMPRESARIAL 1 ** (Pago MENSUAL)",
     price: "14,000.00",
     description: [
       "Usuarios ilimitados",
       "1,000 documentos electrónicos por mes",
       "Windows, MAC, Android o IPhone",
       "Sitio web y aplicación de escritorio (Windows)",
-      "Inventario, CxC, CxP, Traslados de mercancía",
+      "Inventarios y Traslados de mercancía",
       "Soporte técnico",
     ],
   },
   {
-    title: "EMPRESARIAL 2 *",
+    title: "EMPRESARIAL 2 ** (Pago MENSUAL)",
     price: "21,000.00",
     description: [
       "Usuarios ilimitados",
@@ -124,7 +124,7 @@ const tiers = [
     ],
   },
   {
-    title: "EMPRESARIAL 3 *",
+    title: "EMPRESARIAL 3 ** (Pago MENSUAL)",
     price: "28,250.00",
     description: [
       "Usuarios ilimitados",
@@ -137,7 +137,7 @@ const tiers = [
     ],
   },
   {
-    title: "EMPRESARIAL 4 *",
+    title: "EMPRESARIAL 4 ** (Pago MENSUAL)",
     price: "70,500.00",
     description: [
       "Usuarios ilimitados",
@@ -149,7 +149,7 @@ const tiers = [
     ],
   },
   {
-    title: "EMPRESARIAL PRO *",
+    title: "EMPRESARIAL PRO ** (Pago MENSUAL)",
     price: "140,500.00",
     description: [
       "Usuarios ilimitados",
@@ -241,8 +241,21 @@ function PricingPage() {
           color="textPrimary"
           gutterBottom
         >
-          * Al adquirir un plan anual recibirá un descuento equivalente a dos
-          mensualidades.
+          * Todos los planes prepago tienen vigencia de 1 año a partir de la
+          activación de la cuenta, pasado este tiempo, los documentos sin uso
+          expiran.
+        </Typography>
+        <Typography
+          style={{ marginTop: "50px" }}
+          component="h1"
+          variant="h6"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          ** Al adquirir un plan anual recibirá un descuento equivalente a dos
+          mensualidades. Planes tienen vigencia de 1 mes a partir de la
+          activación de la cuenta, los documentos no son acumulativos.
         </Typography>
       </Container>
     </div>
