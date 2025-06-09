@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -32,8 +31,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardPricing: {
     display: "flex",
-    justifyContentContent: "center",
-    alignItems: "baseline",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: theme.spacing(1),
     marginBottom: theme.spacing(2),
   },
   priceLabel: {
@@ -52,118 +52,114 @@ const useStyles = makeStyles((theme) => ({
 
 const tiers = [
   {
-    title: "50 documentos",
-    price: "12,500.00",
+    title: "24 documentos * (Pago único ANUAL)",
+    price: "14,500.00",
     description: [
       "1 usuario",
-      "50 documentos electrónicos",
+      "24 documentos electrónicos",
       "1 terminal (Android o Windows)",
       "Soporte técnico",
       "Recepción de gastos límitados",
     ],
-    monthlyPayment: false,
   },
   {
-    title: "100 documentos",
-    price: "20,500.00",
+    title: "60 documentos * (Pago único ANUAL)",
+    price: "21,500.00",
     description: [
       "1 usuario",
-      "100 documentos electrónicos",
+      "60 documentos electrónicos",
       "1 terminal (Android o Windows)",
       "Soporte técnico",
       "Recepción de gastos límitados",
     ],
-    monthlyPayment: false,
   },
   {
-    title: "PYMES 1 *",
+    title: "150 documentos * (Pago único ANUAL)",
+    price: "30,000.00",
+    description: [
+      "1 usuario",
+      "150 documentos electrónicos",
+      "Windows, MAC, Android o IPhone",
+      "Sitio web de facturación",
+      "Soporte técnico",
+      "Recepción de gastos límitados",
+    ],
+  },
+  {
+    title: "PYMES 1 ** (Pago MENSUAL)",
     subheader: "Most popular",
-    price: "5,000.00",
+    price: "8,500.00",
     description: [
       "Usuarios ilimitados",
       "300 documentos electrónicos por mes",
-      "2 terminales (Android o Windows)",
+      "Windows, MAC, Android o IPhone",
+      "Sitio web de facturación",
       "Recepción de gastos ilimitados",
       "Soporte técnico",
     ],
-    monthlyPayment: true,
   },
   {
-    title: "PYMES 2 *",
-    price: "7,500.00",
-    description: [
-      "Usuarios ilimitados",
-      "750 documentos electrónicos por mes",
-      "2 terminales (Android o Windows)",
-      "Recepción de gastos ilimitados",
-      "Soporte técnico",
-    ],
-    monthlyPayment: true,
-  },
-  {
-    title: "EMPRESARIAL 1 *",
-    price: "10,000.00",
+    title: "EMPRESARIAL 1 ** (Pago MENSUAL)",
+    price: "14,000.00",
     description: [
       "Usuarios ilimitados",
       "1,000 documentos electrónicos por mes",
-      "4 terminales (Android o Windows)",
-      "Recepción de gastos ilimitados",
-      "Inventario, CxC, CxP, Traslados de mercancía",
+      "Windows, MAC, Android o IPhone",
+      "Sitio web y aplicación de escritorio (Windows)",
+      "Inventarios y Traslados de mercancía",
       "Soporte técnico",
     ],
-    monthlyPayment: true,
   },
   {
-    title: "EMPRESARIAL 2 *",
-    price: "15,000.00",
+    title: "EMPRESARIAL 2 ** (Pago MENSUAL)",
+    price: "21,000.00",
     description: [
       "Usuarios ilimitados",
       "1,750 documentos electrónicos por mes",
-      "6 terminales (Android o Windows)",
+      "Windows, MAC, Android o IPhone",
+      "Sitio web y aplicación de escritorio (Windows)",
       "Recepción de gastos ilimitados",
       "ERP Completo",
       "Soporte técnico",
     ],
-    monthlyPayment: true,
   },
   {
-    title: "EMPRESARIAL 3 *",
-    price: "20,000.00",
+    title: "EMPRESARIAL 3 ** (Pago MENSUAL)",
+    price: "28,250.00",
     description: [
       "Usuarios ilimitados",
       "2,500 documentos electrónicos por mes",
-      "8 terminales (Android o Windows)",
+      "Windows, MAC, Android o IPhone",
+      "Sitio web y aplicación de escritorio (Windows)",
       "Recepción de gastos ilimitados",
       "ERP Completo",
       "Soporte técnico",
     ],
-    monthlyPayment: true,
   },
   {
-    title: "EMPRESARIAL 4 *",
-    price: "50,000.00",
+    title: "EMPRESARIAL 4 ** (Pago MENSUAL)",
+    price: "70,500.00",
     description: [
       "Usuarios ilimitados",
       "10,000 facturas por mes",
-      "Terminales ilimitadas (Android o Windows)",
-      "Recepción de gastos ilimitados",
+      "Windows, MAC, Android o IPhone",
+      "Sitio web y aplicación de escritorio (Windows)",
       "ERP Completo",
       "Soporte técnico",
     ],
-    monthlyPayment: true,
   },
   {
-    title: "EMPRESARIAL PRO *",
-    price: "100,000.00",
+    title: "EMPRESARIAL PRO ** (Pago MENSUAL)",
+    price: "140,500.00",
     description: [
       "Usuarios ilimitados",
       "Facturas ilimitadas",
-      "Terminales ilimitadas (Android o Windows)",
+      "Windows, MAC, Android o IPhone",
+      "Sitio web y aplicación de escritorio (Windows)",
       "Recepción de gastos ilimitados",
       "ERP Completo",
       "Soporte técnico",
     ],
-    monthlyPayment: true,
   },
 ];
 
@@ -180,7 +176,7 @@ function PricingPage() {
           color="textPrimary"
           gutterBottom
         >
-          Nuestros planes
+          Nuestros planes (Pago Mensual)
         </Typography>
       </Container>
       <Container maxWidth="md" component="main">
@@ -208,13 +204,8 @@ function PricingPage() {
                       className={classes.restLabel}
                       color="textPrimary"
                     >
-                      + I.V.A.
+                      {"(I.V.A.I.)"}
                     </Typography>
-                    {tier.monthlyPayment && (
-                      <Typography variant="h6" color="textSecondary">
-                        /mensual
-                      </Typography>
-                    )}
                   </div>
                   <ul>
                     {tier.description.map((line) => (
@@ -250,8 +241,21 @@ function PricingPage() {
           color="textPrimary"
           gutterBottom
         >
-          * Al adquirir un plan anual recibirá un descuento equivalente a dos
-          mensualidades.
+          * Todos los planes prepago tienen vigencia de 1 año a partir de la
+          activación de la cuenta, pasado este tiempo, los documentos sin uso
+          expiran.
+        </Typography>
+        <Typography
+          style={{ marginTop: "50px" }}
+          component="h1"
+          variant="h6"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          ** Al adquirir un plan anual recibirá un descuento equivalente a dos
+          mensualidades. Planes tienen vigencia de 1 mes a partir de la
+          activación de la cuenta, los documentos no son acumulativos.
         </Typography>
       </Container>
     </div>
