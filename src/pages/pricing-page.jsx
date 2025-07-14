@@ -101,7 +101,7 @@ const tiers = [
       "Usuarios ilimitados",
       "300 documentos electrónicos por mes",
       "Windows, MAC, Android o IPhone",
-      "Sitio web de facturación",
+      "Sitio web y aplicación de escritorio (Windows)",
       "Clientes, productos, facturación y proformas",
       "Reportes de movimientos",
       "Recepción de gastos ilimitados",
